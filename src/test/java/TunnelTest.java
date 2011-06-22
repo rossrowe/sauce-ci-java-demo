@@ -32,7 +32,7 @@ public class TunnelTest {
         this.code = new Random().nextInt();
         // start the Jetty locally and have it respond our secret code.
          // start the Jetty locally and have it respond our secret code.
-        Server server = new Server();
+        Server server = new Server(8080);
         ServletHandler handler = new ServletHandler();
         handler.addServletWithMapping(new ServletHolder(new HttpServlet() {
             @Override
