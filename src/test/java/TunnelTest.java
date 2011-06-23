@@ -60,7 +60,7 @@ public class TunnelTest {
                     System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
                 }
 
-                System.setProperty("SELENIUM_STARTING_URL", "http://test" + code + ".org/");
+                System.setProperty("SELENIUM_STARTING_URL", "http://testing.org/");
                 Selenium selenium = SeleniumFactory.create();
                 selenium.start();
                 selenium.open("/");
