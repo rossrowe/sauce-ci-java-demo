@@ -25,7 +25,7 @@ public class TunnelTest {
     private int code;
 
     /**
-     * Start a web server locally, set up an SSH tunnel, and have Sauce OnDemand connect to the local server.
+     * Start a web server locally, and have Sauce OnDemand connect to the local server.
      */
     @Test
     public void fullRun() throws Exception {
@@ -51,7 +51,6 @@ public class TunnelTest {
         try {
             // start a tunnel
             System.out.println("Starting a tunnel");
-            Credential c = new Credential();            
 
             String originalUrl = System.getenv("SELENIUM_STARTING_URL");
             try {
@@ -60,7 +59,7 @@ public class TunnelTest {
                     System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
                 }
 
-                System.setProperty("SELENIUM_STARTING_URL", "http://testing.org/");
+                System.setProperty("SELENIUM_STARTING_URL", "http://localhost:8080/");
                 Selenium selenium = SeleniumFactory.create();
                 selenium.start();
                 selenium.open("/");
