@@ -1,6 +1,7 @@
 import com.saucelabs.rest.Credential;
 import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.*;
 import org.junit.Test;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
@@ -50,12 +51,18 @@ public class TunnelTest {
                 selenium.open("/");
                 // if the server really hit our Jetty, we should see the same title that includes the secret code.
                 assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
-                selenium.findElement(By.linkText("Books")).click();
-				selenium.findElement(By.linkText("Kindle")).click();
-				selenium.findElement(By.linkText("Movies & TV")).click();
-				selenium.findElement(By.cssSelector("span.text")).click();
-				selenium.findElement(By.linkText("MP3 Music Store")).click();
-				selenium.findElement(By.linkText("Music CDs")).click();
+                selenium.click("link=Books");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Kindle");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Movies & TV");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("css=span.text");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=MP3 Music Store");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Music CDs");
+				selenium.waitForPageToLoad("30000");
  				selenium.stop();
             } finally {
                 if (originalUrl != null && !originalUrl.equals("")) {
