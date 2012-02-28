@@ -50,7 +50,13 @@ public class TunnelTest {
                 selenium.open("/");
                 // if the server really hit our Jetty, we should see the same title that includes the secret code.
                 assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
-                selenium.stop();
+                selenium.findElement(By.linkText("Books")).click();
+				selenium.findElement(By.linkText("Kindle")).click();
+				selenium.findElement(By.linkText("Movies & TV")).click();
+				selenium.findElement(By.cssSelector("span.text")).click();
+				selenium.findElement(By.linkText("MP3 Music Store")).click();
+				selenium.findElement(By.linkText("Music CDs")).click();
+ 				selenium.stop();
             } finally {
                 if (originalUrl != null && !originalUrl.equals("")) {
                      System.setProperty("SELENIUM_STARTING_URL", originalUrl);
