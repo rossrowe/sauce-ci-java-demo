@@ -53,11 +53,11 @@ public class TunnelTest {
                 assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
                 selenium.waitForPageToLoad("30000");
 								//selenium.click("link=Kindle");
-								selenium.waitForPageToLoad("30000");
+								//selenium.waitForPageToLoad("30000");
 								selenium.click("link=Movies & TV");
 								selenium.waitForPageToLoad("30000");
-								selenium.click("css=span.text");
-								selenium.waitForPageToLoad("30000");
+								//selenium.click("css=span.text");
+								//selenium.waitForPageToLoad("30000");
 								selenium.click("link=MP3 Music Store");
 								selenium.waitForPageToLoad("30000");
 								selenium.click("link=Music CDs");
