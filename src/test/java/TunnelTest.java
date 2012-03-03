@@ -62,7 +62,7 @@ public class TunnelTest {
 								//selenium.waitForPageToLoad("30000");
 								selenium.click("link=Music CDs");
 								//selenium.waitForPageToLoad("30000");
-				 				selenium.stop();
+				 				//selenium.stop();
  				//selenium.stop();
             } finally {
                 if (originalUrl != null && !originalUrl.equals("")) {
