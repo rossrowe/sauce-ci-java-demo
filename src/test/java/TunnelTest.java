@@ -60,7 +60,7 @@ public class TunnelTest {
 				selenium.click("link=New Releases");
 				selenium.waitForPageToLoad("30000");
 				 				//selenium.stop();
- 				//selenium.stop();
+ 								selenium.stop();
             } finally {
                 if (originalUrl != null && !originalUrl.equals("")) {
                      System.setProperty("SELENIUM_STARTING_URL", originalUrl);
