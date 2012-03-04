@@ -40,10 +40,10 @@ public class TunnelTest {
 
             String originalUrl = System.getenv("SELENIUM_STARTING_URL");
             try {
-                String driver = System.getenv("SELENIUM_DRIVER");
-                if (driver == null || driver.equals("")) {
-                    System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
-                }
+                //String driver = System.getenv("SELENIUM_DRIVER");
+                //if (driver == null || driver.equals("")) {
+                //    System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
+                //}
 
                 System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
                 Selenium selenium = SeleniumFactory.create();
