@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.saucelabs.selenium:sauce-ondemand-driver:2.0">
     <CLASSES>
-      <root url="jar://C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0-javadoc.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/bin/C:/work/atlassian-plugin-sdk-3.3.1/repository/com/saucelabs/selenium/sauce-ondemand-driver/2.0/sauce-ondemand-driver-2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
