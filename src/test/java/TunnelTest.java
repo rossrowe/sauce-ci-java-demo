@@ -45,7 +45,7 @@ public class TunnelTest {
                     System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
                 }
 
-                System.setProperty("SELENIUM_STARTING_URL", "http://localhost:8080/");
+                System.setProperty("SELENIUM_STARTING_URL", "http://mbp.local:8080/");
                 Selenium selenium = SeleniumFactory.create();
                 selenium.start();
                 selenium.open("/jenkins");
