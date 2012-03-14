@@ -45,19 +45,26 @@ public class TunnelTest {
                     System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
                 }
 
-                System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
+                System.setProperty("SELENIUM_STARTING_URL", "http://localhost:8080/");
                 Selenium selenium = SeleniumFactory.create();
                 selenium.start();
-                selenium.open("/");
-                // if the server really hit our Jetty, we should see the same title that includes the secret code.
-                assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
-                selenium.click("id=twotabsearchtextbox");
-				selenium.type("id=twotabsearchtextbox", "bendis");
-				selenium.click("css=input[type=\"image\"]");
+                selenium.open("/jenkins");
+         
+				selenium.click("link=Manage Jenkins");
 				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Scarlet, Book 1");
+				selenium.click("link=Configure System");
 				selenium.waitForPageToLoad("30000");
-				selenium.click("link=New Releases");
+				selenium.click("link=Jenkins");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=MultiConfig");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Back to Dashboard");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Non Maven Project");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Workspace");
+				selenium.waitForPageToLoad("30000");
+				selenium.click("link=Jenkins");
 				selenium.waitForPageToLoad("30000");
 				 				//selenium.stop();
  								selenium.stop();
