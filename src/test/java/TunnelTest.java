@@ -33,8 +33,8 @@ public class TunnelTest {
         selenium.type("id=twotabsearchtextbox", "bendis");
         selenium.click("css=input[type=\"image\"]");
         selenium.waitForPageToLoad("30000");
-        selenium.click("link=Scarlet, Book 1");
-        selenium.waitForPageToLoad("30000");
+        //selenium.click("link=Scarlet, Book 1");
+        //selenium.waitForPageToLoad("30000");
         selenium.click("link=New Releases");
         selenium.waitForPageToLoad("30000");
         //selenium.stop();
