@@ -35,48 +35,27 @@ public class TunnelTest {
          // start the Jetty locally and have it respond our secret code.
        
         try {
-            // start a tunnel
-            System.out.println("Starting a tunnel");
-
-            String originalUrl = System.getenv("SELENIUM_STARTING_URL");
-            try {
-                String driver = System.getenv("SELENIUM_DRIVER");
-                if (driver == null || driver.equals("")) {
-                    System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
-                }
-
-				System.setProperty("SELENIUM_HOST", "localhost");
-				System.setProperty("SELENIUM_PORT", "4445");
-                System.setProperty("SELENIUM_STARTING_URL", "http://mbp.local:8080/");
-                Selenium selenium = SeleniumFactory.create();
-                selenium.start();
-                selenium.open("/jenkins");
-         
-				selenium.click("link=Manage Jenkins");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Configure System");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Jenkins");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=MultiConfig");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Back to Dashboard");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Non Maven Project");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Workspace");
-				selenium.waitForPageToLoad("30000");
-				selenium.click("link=Jenkins");
-				selenium.waitForPageToLoad("30000");
-				 				//selenium.stop();
- 								selenium.stop();
-            } finally {
-                if (originalUrl != null && !originalUrl.equals("")) {
-                     System.setProperty("SELENIUM_STARTING_URL", originalUrl);
-                }
+            String driver = System.getenv("SELENIUM_DRIVER");
+            if (driver == null || driver.equals("")) {
+                System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
             }
-        } finally {
-            //server.stop();
-        }
+
+            System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
+            Selenium selenium = SeleniumFactory.create();
+            selenium.start();
+            selenium.open("/");
+            // if the server really hit our Jetty, we should see the same title that includes the secret code.
+            assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
+            selenium.click("id=twotabsearchtextbox");
+            selenium.type("id=twotabsearchtextbox", "bendis");
+            selenium.click("css=input[type=\"image\"]");
+            selenium.waitForPageToLoad("30000");
+            selenium.click("link=Scarlet, Book 1");
+            selenium.waitForPageToLoad("30000");
+            selenium.click("link=New Releases");
+            selenium.waitForPageToLoad("30000");
+            //selenium.stop();
+            selenium.stop();
+            }
     }
 }
