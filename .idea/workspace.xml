@@ -14,9 +14,7 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f368ecb3-6c05-43f5-9862-bc968357990c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TunnelTest.java" afterPath="$PROJECT_DIR$/src/test/java/TunnelTest.java" />
-    </list>
+    <list default="true" id="f368ecb3-6c05-43f5-9862-bc968357990c" name="Default" comment="" />
     <ignored path="SauceConnectTest.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

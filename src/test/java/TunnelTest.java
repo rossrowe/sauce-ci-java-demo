@@ -35,8 +35,8 @@ public class TunnelTest {
         selenium.waitForPageToLoad("30000");
         //selenium.click("link=Scarlet, Book 1");
         //selenium.waitForPageToLoad("30000");
-        selenium.click("link=New Releases");
-        selenium.waitForPageToLoad("30000");
+        //selenium.click("link=New Releases");
+        //selenium.waitForPageToLoad("30000");
         //selenium.stop();
         selenium.stop();
 
