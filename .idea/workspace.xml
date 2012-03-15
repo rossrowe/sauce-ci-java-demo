@@ -15,6 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f368ecb3-6c05-43f5-9862-bc968357990c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TunnelTest.java" afterPath="$PROJECT_DIR$/src/test/java/TunnelTest.java" />
     </list>
     <ignored path="SauceConnectTest.iws" />
@@ -76,7 +77,7 @@
       <file leaf-file-name="TunnelTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TunnelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="14" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.85820895">
+            <state line="37" column="104" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.74626863">
               <folding />
             </state>
           </provider>
@@ -493,7 +494,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TunnelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="14" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.85820895">
+        <state line="37" column="104" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.74626863">
           <folding />
         </state>
       </provider>
