@@ -1,6 +1,6 @@
 import com.saucelabs.selenium.client.factory.SeleniumFactory;
-import com.thoughtworks.selenium.Selenium;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,21 +24,21 @@ public class TunnelTest {
         }
 
         System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
-        Selenium selenium = SeleniumFactory.create();
-        selenium.start();
-        selenium.open("/");
+        WebDriver selenium = SeleniumFactory.createWebDriver();
+        //selenium.start();
+        selenium.get("http://www.amazon.com/");
         // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
-        selenium.click("id=twotabsearchtextbox");
-        selenium.type("id=twotabsearchtextbox", "bendis");
-        selenium.click("css=input[type=\"image\"]");
-        selenium.waitForPageToLoad("30000");
+//        selenium.click("id=twotabsearchtextbox");
+//        selenium.type("id=twotabsearchtextbox", "bendis");
+//        selenium.click("css=input[type=\"image\"]");
+//        selenium.waitForPageToLoad("30000");
         //selenium.click("link=Scarlet, Book 1");
         //selenium.waitForPageToLoad("30000");
         //selenium.click("link=New Releases");
         //selenium.waitForPageToLoad("30000");
         //selenium.stop();
-        selenium.stop();
+        selenium.close();
 
     }
 }
