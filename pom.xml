@@ -40,13 +40,13 @@
         <dependency>
             <groupId>com.saucelabs.selenium</groupId>
             <artifactId>sauce-ondemand-driver</artifactId>
-            <version>2.2-SNAPSHOT</version>
+            <version>2.4-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.saucelabs.selenium</groupId>
             <artifactId>selenium-client-factory</artifactId>
-            <version>2.2-SNAPSHOT</version>
+            <version>2.4-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -55,11 +55,6 @@
             <version>6.1.11</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.saucelabs</groupId>
-            <artifactId>sauce-rest-api</artifactId>
-            <version>1.5</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 </project>
