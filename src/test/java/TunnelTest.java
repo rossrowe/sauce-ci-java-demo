@@ -1,4 +1,6 @@
 import com.saucelabs.selenium.client.factory.SeleniumFactory;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -11,6 +13,23 @@ public class TunnelTest {
 
     protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
     private int code;
+    private WebDriver selenium;
+
+    @Before
+    public void setUp() throws Exception {
+        String driver = System.getenv("SELENIUM_DRIVER");
+        if (driver == null || driver.equals("")) {
+            System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
+        }
+
+        System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
+        selenium = SeleniumFactory.createWebDriver();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        selenium.quit();
+    }
 
     /**
      * Start a web server locally, and have Sauce OnDemand connect to the local server.
@@ -18,27 +37,24 @@ public class TunnelTest {
     @Test
     public void fullRun() throws Exception {
 
-        String driver = System.getenv("SELENIUM_DRIVER");
-        if (driver == null || driver.equals("")) {
-            System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
-        }
-
-        System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
-        WebDriver selenium = SeleniumFactory.createWebDriver();
         //selenium.start();
         selenium.get("http://www.amazon.com/");
         // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
-//        selenium.click("id=twotabsearchtextbox");
-//        selenium.type("id=twotabsearchtextbox", "bendis");
-//        selenium.click("css=input[type=\"image\"]");
-//        selenium.waitForPageToLoad("30000");
-        //selenium.click("link=Scarlet, Book 1");
-        //selenium.waitForPageToLoad("30000");
-        //selenium.click("link=New Releases");
-        //selenium.waitForPageToLoad("30000");
-        //selenium.stop();
-        selenium.close();
+
+
+    }
+
+    /**
+     * Start a web server locally, and have Sauce OnDemand connect to the local server.
+     */
+    @Test
+    public void failure() throws Exception {
+
+        //selenium.start();
+        selenium.get("http://www.amazon.com/");
+        // if the server really hit our Jetty, we should see the same title that includes the secret code.
+        assertEquals("Blah", selenium.getTitle());
 
     }
 }
