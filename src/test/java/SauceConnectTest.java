@@ -44,7 +44,7 @@ public class SauceConnectTest {
         hostName = getHostName();
         //hostName = "localhost";
 
-        //System.setProperty("SELENIUM_PORT", "4445");
+        System.setProperty("SELENIUM_PORT", "4445");
         //System.setProperty("SELENIUM_HOST", "localhost");
         System.setProperty("SELENIUM_STARTING_URL", "http://" + hostName + ":" + PORT);
         this.selenium = SeleniumFactory.createWebDriver();
