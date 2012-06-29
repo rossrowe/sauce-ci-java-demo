@@ -1,4 +1,3 @@
-import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -6,20 +5,20 @@ import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
 import org.mortbay.jetty.servlet.ServletHandler;
 import org.mortbay.jetty.servlet.ServletHolder;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.URL;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.net.URL;
 import java.util.Enumeration;
 import java.util.Random;
 
@@ -47,7 +46,7 @@ public class SauceConnectTest {
         //}
         hostName = getHostName();
         hostName = "localhost";
-        hostName = System.getenv("SELENIUM_HOST");
+        //hostName = System.getenv("SELENIUM_HOST");
 
         System.setProperty("SELENIUM_PORT", "4445");
         //System.setProperty("SELENIUM_HOST", "localhost");

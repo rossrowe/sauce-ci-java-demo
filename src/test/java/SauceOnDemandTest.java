@@ -1,8 +1,12 @@
-import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
 
@@ -23,7 +27,13 @@ public class SauceOnDemandTest {
         }
 
         System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
-        selenium = SeleniumFactory.createWebDriver();
+        //selenium = SeleniumFactory.createWebDriver();
+        DesiredCapabilities capabillities = DesiredCapabilities.firefox();
+        capabillities.setCapability("version", "4");
+        capabillities.setCapability("platform", Platform.XP);
+        this.selenium = new RemoteWebDriver(
+                new URL("http://rossco_9_9:44f0744c-1689-4418-af63-560303cbb37b@ondemand.saucelabs.com:80/wd/hub"),
+                capabillities);
     }
 
     @After
