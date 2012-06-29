@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * @author Ross Rowe
  */
-public class TunnelTest {
+public class SauceOnDemandTest {
 
     protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
     private int code;
@@ -32,28 +32,22 @@ public class TunnelTest {
     }
 
     /**
-     * Start a web server locally, and have Sauce OnDemand connect to the local server.
+     *
      */
     @Test
     public void fullRun() throws Exception {
-
-        //selenium.start();
         selenium.get("http://www.amazon.com/");
-        // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
 
 
     }
 
     /**
-     * Start a web server locally, and have Sauce OnDemand connect to the local server.
+     *
      */
     @Test
     public void failure() throws Exception {
-
-        //selenium.start();
         selenium.get("http://www.amazon.com/");
-        // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("Blah", selenium.getTitle());
 
     }
