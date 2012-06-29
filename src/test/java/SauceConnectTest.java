@@ -26,7 +26,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class SauceConnectTest {
 
-    protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
+    protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?username=rossco_9_9&access-key=44f0744c-1689-4418-af63-560303cbb37b&max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
     public static final int PORT = 5000;
 
     private WebDriver selenium;
@@ -37,15 +37,15 @@ public class SauceConnectTest {
 
     @Before
     public void setUp() throws Exception {
-        String driver = System.getenv("SELENIUM_DRIVER");
-        if (driver == null || driver.equals("")) {
-            System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
-        }
+        //String driver = System.getenv("SELENIUM_DRIVER");
+        //if (driver == null || driver.equals("")) {
+        System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
+        //}
         hostName = getHostName();
         //hostName = "localhost";
 
-        System.setProperty("SELENIUM_PORT", "4445");
-        System.setProperty("SELENIUM_HOST", "localhost");
+        //System.setProperty("SELENIUM_PORT", "4445");
+        //System.setProperty("SELENIUM_HOST", "localhost");
         System.setProperty("SELENIUM_STARTING_URL", "http://" + hostName + ":" + PORT);
         this.selenium = SeleniumFactory.createWebDriver();
         //this.selenium = new FirefoxDriver();
