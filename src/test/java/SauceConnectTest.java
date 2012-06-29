@@ -7,6 +7,9 @@ import org.mortbay.jetty.bio.SocketConnector;
 import org.mortbay.jetty.servlet.ServletHandler;
 import org.mortbay.jetty.servlet.ServletHolder;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.Platform;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -47,7 +50,14 @@ public class SauceConnectTest {
         System.setProperty("SELENIUM_PORT", "4445");
         //System.setProperty("SELENIUM_HOST", "localhost");
         System.setProperty("SELENIUM_STARTING_URL", "http://" + hostName + ":" + PORT);
-        this.selenium = SeleniumFactory.createWebDriver();
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+        capabilities.setCapability("version", "4");
+        capabilities.setCapability("platform", Platform.XP);
+        //this.selenium = SeleniumFactory.createWebDriver();
+        this.selenium = new RemoteWebDriver(new URL("http://rossco_9_9:44f0744c-1689-4418-af63-560303cbb37b@" + hostname + ":4445/wd/hub"),
+            capabilities);
+        
+        
         //this.selenium = new FirefoxDriver();
         server = new Server(PORT);
         ServletHandler handler = new ServletHandler();
