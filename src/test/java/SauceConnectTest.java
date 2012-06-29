@@ -47,6 +47,7 @@ public class SauceConnectTest {
         //}
         hostName = getHostName();
         hostName = "localhost";
+        hostName = System.getenv("SELENIUM_HOST");
 
         System.setProperty("SELENIUM_PORT", "4445");
         //System.setProperty("SELENIUM_HOST", "localhost");
