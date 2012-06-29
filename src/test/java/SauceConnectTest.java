@@ -55,7 +55,7 @@ public class SauceConnectTest {
         capabilities.setCapability("version", "4");
         capabilities.setCapability("platform", Platform.XP);
         //this.selenium = SeleniumFactory.createWebDriver();
-        this.selenium = new RemoteWebDriver(new URL("http://rossco_9_9:44f0744c-1689-4418-af63-560303cbb37b@" + hostname + ":4445/wd/hub"),
+        this.selenium = new RemoteWebDriver(new URL("http://rossco_9_9:44f0744c-1689-4418-af63-560303cbb37b@" + hostName + ":4445/wd/hub"),
             capabilities);
         
         
