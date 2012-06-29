@@ -15,8 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f368ecb3-6c05-43f5-9862-bc968357990c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" afterPath="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="SauceConnectTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SauceConnectTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SauceConnectTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SauceConnectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="43" selection-start="3985" selection-end="3985" vertical-scroll-proportion="2.9125">
+            <state line="117" column="43" selection-start="3985" selection-end="3985" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="21" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
+            <state line="55" column="24" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.8125">
               <folding />
             </state>
           </provider>
@@ -126,9 +126,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/TunnelTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -555,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="21" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="6" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
@@ -571,10 +564,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceConnectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="43" selection-start="3985" selection-end="3985" vertical-scroll-proportion="2.9125">
+        <state line="117" column="43" selection-start="3985" selection-end="3985" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="24" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.8125">
+          <folding />
         </state>
       </provider>
     </entry>
