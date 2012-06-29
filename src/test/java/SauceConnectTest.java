@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
@@ -23,11 +27,13 @@ import static org.junit.Assert.assertEquals;
 public class SauceConnectTest {
 
     protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
+    public static final int PORT = 5000;
 
     private WebDriver selenium;
     private Server server;
     int jettyLocalPort;
     final int secret = new Random().nextInt();
+    private String hostName;
 
     @Before
     public void setUp() throws Exception {
@@ -35,13 +41,15 @@ public class SauceConnectTest {
         if (driver == null || driver.equals("")) {
             System.setProperty("SELENIUM_DRIVER", DEFAULT_SAUCE_DRIVER);
         }
+        hostName = getHostName();
+        //hostName = "localhost";
 
-        System.setProperty("SELENIUM_STARTING_URL", "http://localhost:8080/");
+        System.setProperty("SELENIUM_PORT", "4445");
+        System.setProperty("SELENIUM_HOST", "localhost");
+        System.setProperty("SELENIUM_STARTING_URL", "http://" + hostName + ":" + PORT);
         this.selenium = SeleniumFactory.createWebDriver();
-
-//        FirefoxProfile profile = new FirefoxProfile();
-//        this.selenium = new FirefoxDriver(new FirefoxBinary(new File("/Applications/Firefox.app")), profile);
-        server = new Server(8080);
+        //this.selenium = new FirefoxDriver();
+        server = new Server(PORT);
         ServletHandler handler = new ServletHandler();
         handler.addServletWithMapping(new ServletHolder(new HttpServlet() {
             @Override
@@ -57,7 +65,44 @@ public class SauceConnectTest {
         server.start();
         jettyLocalPort = connector.getLocalPort();
         System.out.println("Started Jetty at "+ jettyLocalPort);
-        //this.selenium = new FirefoxDriver();
+
+    }
+
+    private String getHostName() {
+
+        try {
+            // Replace eth0 with your interface name
+            NetworkInterface i = null;
+
+            i = NetworkInterface.getByName("eth0");
+
+
+            if (i != null) {
+
+                Enumeration<InetAddress> iplist = i.getInetAddresses();
+
+                InetAddress addr = null;
+
+                while (iplist.hasMoreElements()) {
+                    InetAddress ad = iplist.nextElement();
+                    byte bs[] = ad.getAddress();
+                    if (bs.length == 4 && bs[0] != 127) {
+                        addr = ad;
+                        // You could also display the host name here, to
+                        // see the whole list, and remove the break.
+                        break;
+                    }
+                }
+
+                if (addr != null) {
+                    return addr.getCanonicalHostName();
+                }
+            }
+        } catch (SocketException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return null;
+
     }
 
     @After
@@ -70,7 +115,7 @@ public class SauceConnectTest {
      */
     @Test
     public void fullRun() throws Exception {
-       selenium.get("http://localhost:8080");
+       selenium.get("http://" + hostName + ":" + PORT);
         // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("test" + secret, selenium.getTitle());
     }
