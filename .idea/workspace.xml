@@ -15,6 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f368ecb3-6c05-43f5-9862-bc968357990c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/SeleniumClientFactoryOnDemandTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/SeleniumClientFactorySauceConnectTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" afterPath="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java" afterPath="$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java" />
@@ -78,19 +80,35 @@
       <file leaf-file-name="SauceOnDemandTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="55" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
+            <state line="18" column="143" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SauceConnectTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SeleniumClientFactoryOnDemandTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumClientFactoryOnDemandTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="143" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SauceConnectTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SauceConnectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="10" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.24489796">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="17" column="19" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeleniumClientFactorySauceConnectTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumClientFactorySauceConnectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="19" selection-start="329" selection-end="329" vertical-scroll-proportion="0.2">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,8 +146,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/TunnelTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SauceConnectTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumClientFactoryOnDemandTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SeleniumClientFactorySauceConnectTest.java" />
       </list>
     </option>
   </component>
@@ -148,8 +168,10 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="4" />
+    <option name="y" value="22" />
+    <option name="width" value="1276" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -265,17 +287,22 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="102" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="896" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="894" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="896" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="100" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="96" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="Regex">
     <option name="pos1" value="218" />
@@ -406,8 +433,8 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Remote.Maven" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SauceConnectTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SauceConnectTest" />
+      <item index="1" class="java.lang.String" itemvalue="Remote.Maven" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -441,23 +468,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="4" y="22" width="1276" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39808482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6019152" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -547,33 +576,41 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="55" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.6/junit-4.6.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="40" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="24" selection-start="1109" selection-end="1306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="37" column="24" selection-start="1109" selection-end="1306" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SauceConnectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="10" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.24489796">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="17" column="19" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumClientFactoryOnDemandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="143" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SauceOnDemandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="143" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SeleniumClientFactorySauceConnectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="329" selection-end="329" vertical-scroll-proportion="0.2">
+          <folding />
         </state>
       </provider>
     </entry>

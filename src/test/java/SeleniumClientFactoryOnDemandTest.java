@@ -1,3 +1,4 @@
+import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -14,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * @author Ross Rowe
  */
-public class SauceOnDemandTest {
+public class SeleniumClientFactoryOnDemandTest {
 
     protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
     private WebDriver selenium;
@@ -27,13 +28,7 @@ public class SauceOnDemandTest {
         }
 
         System.setProperty("SELENIUM_STARTING_URL", "http://www.amazon.com/");
-        //selenium = SeleniumFactory.createWebDriver();
-        DesiredCapabilities capabillities = DesiredCapabilities.firefox();
-        capabillities.setCapability("version", "4");
-        capabillities.setCapability("platform", Platform.XP);
-        this.selenium = new RemoteWebDriver(
-                new URL("http://rossco_9_9:44f0744c-1689-4418-af63-560303cbb37b@ondemand.saucelabs.com:80/wd/hub"),
-                capabillities);
+        selenium = SeleniumFactory.createWebDriver();
     }
 
     @After
