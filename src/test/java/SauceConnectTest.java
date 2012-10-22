@@ -77,6 +77,8 @@ public class SauceConnectTest {
      */
     @Test
     public void fullRun() throws Exception {
+        String sessionId = ((RemoteWebDriver)selenium).getSessionId().toString();
+        	   System.out.println("SauceOnDemandSessionID=" + sessionId);
        selenium.get("http://" + hostName + ":" + PORT);
         // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("test" + secret, selenium.getTitle());

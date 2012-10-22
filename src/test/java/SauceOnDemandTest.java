@@ -45,8 +45,10 @@ public class SauceOnDemandTest {
      *
      */
     @Test
-    @Ignore
+
     public void fullRun() throws Exception {
+        String sessionId = ((RemoteWebDriver)selenium).getSessionId().toString();
+        	   System.out.println("SauceOnDemandSessionID=" + sessionId);
         selenium.get("http://www.amazon.com/");
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", selenium.getTitle());
 
@@ -58,6 +60,8 @@ public class SauceOnDemandTest {
      */
     @Test
     public void failure() throws Exception {
+        String sessionId = ((RemoteWebDriver)selenium).getSessionId().toString();
+        	   System.out.println("SauceOnDemandSessionID=" + sessionId);
         selenium.get("http://www.amazon.com/");
         assertEquals("Blah", selenium.getTitle());
 
