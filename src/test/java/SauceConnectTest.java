@@ -24,7 +24,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class SauceConnectTest {
 
-    protected static final String DEFAULT_SAUCE_DRIVER = "sauce-ondemand:?username=rossco_9_9&access-key=XXX&max-duration=300&os=windows 2008&browser=firefox&browser-version=4.";
     public static final int PORT = 5000;
 
     private WebDriver selenium;
@@ -43,7 +42,7 @@ public class SauceConnectTest {
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
         String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
-        String accessKey = Utils.readPropertyOrEnv("SAUCE_ACCESS_KEY", "");
+        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
         this.selenium = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@" + hostName + ":4445/wd/hub"),
                 capabilities);
 
