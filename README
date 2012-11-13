@@ -1,0 +1,2 @@
+This project contains a sample Maven project that demonstrates the integration points required to leverage the
+functionality provided by the Sauce OnDemand CI plugins (for Jenkins, Bamboo and Hudson).

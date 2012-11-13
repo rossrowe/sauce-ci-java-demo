@@ -5,7 +5,6 @@ import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
 import org.mortbay.jetty.servlet.ServletHandler;
 import org.mortbay.jetty.servlet.ServletHolder;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -38,16 +37,17 @@ public class SauceConnectTest {
     public void setUp() throws Exception {
 
         hostName = "localhost";
+        //construct the DesiredCapabilities using the environment variables set by the Sauce CI plugin
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("version", Utils.readPropertyOrEnv("SELENIUM_VERSION", "4"));
+        capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
+        capabilities.setCapability("browser", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
+        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
+        String accessKey = Utils.readPropertyOrEnv("SAUCE_ACCESS_KEY", "");
+        this.selenium = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@" + hostName + ":4445/wd/hub"),
+                capabilities);
 
-        System.setProperty("SELENIUM_PORT", "4445");
-        System.setProperty("SELENIUM_STARTING_URL", "http://" + hostName + ":" + PORT);
-        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-        capabilities.setCapability("version", "4");
-        capabilities.setCapability("platform", Platform.XP);
-        //this.selenium = SeleniumFactory.createWebDriver();
-        this.selenium = new RemoteWebDriver(new URL("http://rossco_9_9:XXX@" + hostName + ":4445/wd/hub"),
-            capabilities);
-
+        //create a local jetty server
         server = new Server(PORT);
         ServletHandler handler = new ServletHandler();
         handler.addServletWithMapping(new ServletHolder(new HttpServlet() {
@@ -63,7 +63,7 @@ public class SauceConnectTest {
         server.addConnector(connector);
         server.start();
         jettyLocalPort = connector.getLocalPort();
-        System.out.println("Started Jetty at "+ jettyLocalPort);
+        System.out.println("Started Jetty at " + jettyLocalPort);
 
     }
 
@@ -77,9 +77,9 @@ public class SauceConnectTest {
      */
     @Test
     public void fullRun() throws Exception {
-        String sessionId = ((RemoteWebDriver)selenium).getSessionId().toString();
-        	   System.out.println("SauceOnDemandSessionID=" + sessionId);
-       selenium.get("http://" + hostName + ":" + PORT);
+        String sessionId = ((RemoteWebDriver) selenium).getSessionId().toString();
+        System.out.println("SauceOnDemandSessionID=" + sessionId);
+        selenium.get("http://" + hostName + ":" + PORT);
         // if the server really hit our Jetty, we should see the same title that includes the secret code.
         assertEquals("test" + secret, selenium.getTitle());
     }
