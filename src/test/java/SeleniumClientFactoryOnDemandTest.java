@@ -35,6 +35,7 @@ public class SeleniumClientFactoryOnDemandTest {
      *
      */
     @Test
+    @Ignore
     public void fullRun() throws Exception {
         webDriver.get("http://www.amazon.com/");
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
