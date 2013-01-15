@@ -19,7 +19,9 @@ public class SauceOnDemandTest {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("version", Utils.readPropertyOrEnv("SELENIUM_VERSION", "4"));
+        String version = Utils.readPropertyOrEnv("SELENIUM_VERSION", "");
+        if (!version.equals(""))
+            capabilities.setCapability("version", version);
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
         String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
