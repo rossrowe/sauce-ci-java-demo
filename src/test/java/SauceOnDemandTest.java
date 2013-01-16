@@ -1,5 +1,6 @@
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -40,6 +41,7 @@ public class SauceOnDemandTest {
      *
      */
     @Test
+    @Ignore
     public void basic() throws Exception {
         String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
         System.out.println("SauceOnDemandSessionID=" + sessionId);
