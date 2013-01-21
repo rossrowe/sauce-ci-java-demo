@@ -41,7 +41,6 @@ public class SauceOnDemandTest {
      *
      */
     @Test
-    @Ignore
     public void basic() throws Exception {
         String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
         System.out.println("SauceOnDemandSessionID=" + sessionId);

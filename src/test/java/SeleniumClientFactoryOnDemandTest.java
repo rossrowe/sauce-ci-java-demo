@@ -1,6 +1,7 @@
 import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -34,6 +35,7 @@ public class SeleniumClientFactoryOnDemandTest {
      *
      */
     @Test
+    @Ignore
     public void fullRun() throws Exception {
         webDriver.get("http://www.amazon.com/");
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
