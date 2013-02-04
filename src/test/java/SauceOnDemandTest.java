@@ -2,6 +2,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -41,10 +42,30 @@ public class SauceOnDemandTest {
      *
      */
     @Test
+    @Ignore
     public void basic() throws Exception {
+
+        int timeout = 10000;
+        for (int second = 0; ; second++) {
+            if (second >= timeout) {
+                System.out.println("Timeout. Unable to find the Specified element");
+                break;
+            }
+
+            try {
+                if (webDriver.findElement(By.id("some_id")) != null)
+                    break;
+
+            } catch (Exception e) {
+            }
+            Thread.sleep(1000);
+        }
+
+
         String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
         System.out.println("SauceOnDemandSessionID=" + sessionId);
         webDriver.get("http://www.amazon.com/");
+
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
 
     }
