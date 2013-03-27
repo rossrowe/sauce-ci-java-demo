@@ -1,6 +1,5 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
@@ -76,7 +75,6 @@ public class SauceConnectTest {
      * Start a web server locally, and have Sauce OnDemand connect to the local server.
      */
     @Test
-    @Ignore
     public void fullRun() throws Exception {
         String sessionId = ((RemoteWebDriver) selenium).getSessionId().toString();
         System.out.println("SauceOnDemandSessionID=" + sessionId);

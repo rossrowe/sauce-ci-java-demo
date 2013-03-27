@@ -1,8 +1,6 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -21,13 +19,13 @@ public class SauceOnDemandTest {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        String version = Utils.readPropertyOrEnv("SELENIUM_VERSION", "");
+        String version = Utils.readPropertyOrEnv("SELENIUM_VERSION", "17");
         if (!version.equals(""))
             capabilities.setCapability("version", version);
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
-        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
-        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
+        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "rossco_9_9");
+        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "44f0744c-1689-4418-af63-560303cbb37b");
         this.webDriver = new RemoteWebDriver(
                 new URL("http://" + username + ":" + accessKey + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
@@ -42,30 +40,11 @@ public class SauceOnDemandTest {
      *
      */
     @Test
-    @Ignore
     public void basic() throws Exception {
 
-        int timeout = 10000;
-        for (int second = 0; ; second++) {
-            if (second >= timeout) {
-                System.out.println("Timeout. Unable to find the Specified element");
-                break;
-            }
-
-            try {
-                if (webDriver.findElement(By.id("some_id")) != null)
-                    break;
-
-            } catch (Exception e) {
-            }
-            Thread.sleep(1000);
-        }
-
-
         String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
-        System.out.println("SauceOnDemandSessionID=" + sessionId);
+        System.out.println("SauceOnDemandSessionID=" + sessionId + " job-name=basic");
         webDriver.get("http://www.amazon.com/");
-
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
 
     }
