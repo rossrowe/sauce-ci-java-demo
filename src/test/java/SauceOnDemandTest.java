@@ -24,8 +24,8 @@ public class SauceOnDemandTest {
             capabilities.setCapability("version", version);
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
-        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "rossco_9_9");
-        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "44f0744c-1689-4418-af63-560303cbb37b");
+        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "YOUR_SAUCE_USERNAME");
+        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "YOUR_SAUCE_ACCESS_KEY");
         this.webDriver = new RemoteWebDriver(
                 new URL("http://" + username + ":" + accessKey + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
