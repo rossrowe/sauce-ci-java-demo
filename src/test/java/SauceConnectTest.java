@@ -1,18 +1,12 @@
 import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import com.saucelabs.junit.SauceOnDemandTestWatcher;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
+import org.junit.*;
 import org.junit.rules.TestName;
-import org.junit.Test;
-
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
 import org.mortbay.jetty.servlet.ServletHandler;
 import org.mortbay.jetty.servlet.ServletHolder;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -105,6 +99,7 @@ public class SauceConnectTest implements SauceOnDemandSessionIdProvider {
      * same title that includes the secret code.
      */
     @Test
+    @Ignore
     public void validateTitle() throws Exception {
         webDriver.get("http://" + hostName + ":" + PORT);
         assertEquals("test" + secret, webDriver.getTitle());

@@ -1,21 +1,14 @@
 import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import com.saucelabs.junit.SauceOnDemandTestWatcher;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
+import org.junit.*;
 import org.junit.rules.TestName;
-import org.junit.Test;
-
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
-
-import java.util.Formatter;
 
 import static org.junit.Assert.assertEquals;
 
@@ -152,6 +145,7 @@ public class WebDriverWithHelperArraysTest implements SauceOnDemandSessionIdProv
     }
 
     @Test
+    @Ignore
     public void validateTitle() throws Exception {
         if (!done) {
             try {
