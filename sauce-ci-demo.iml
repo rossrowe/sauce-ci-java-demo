@@ -59,12 +59,12 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:sauce_java_common:1.0.18" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:saucerest:1.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:sauce-ondemand-driver:2.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:sauce-ondemand-driver:2.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:sauce-rest-api:1.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jvnet.hudson:trilead-ssh2:build212-hudson-5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.5.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.jackson:jackson-core-asl:1.5.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:selenium-client-factory:2.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:selenium-client-factory:2.9" level="project" />
   </component>
 </module>
 
