@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-java:2.29.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-android-driver:2.29.0" level="project" />
@@ -40,9 +39,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.w3c.css:sac:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-io:commons-io:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-websocket:8.1.7.v20120910" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-util:8.1.7.v20120910" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-io:8.1.7.v20120910" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.eclipse.jetty:jetty-http:8.1.7.v20120910" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:7.2.1.v20101111" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:7.2.1.v20101111" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:7.2.1.v20101111" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-firefox-driver:2.29.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-ie-driver:2.29.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-iphone-driver:2.29.0" level="project" />
@@ -50,21 +49,21 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.webbitserver:webbit:0.4.14" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.netty:netty:3.5.2.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium:selenium-support:2.29.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:jetty:6.1.26" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:jetty-util:6.1.26" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-server:7.2.1.v20101111" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-continuation:7.2.1.v20101111" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:sauce_junit:1.0.18" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:sauce_java_common:1.0.18" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:saucerest:1.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:sauce-ondemand-driver:2.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:sauce-ondemand-driver:2.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs:sauce-rest-api:1.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jvnet.hudson:trilead-ssh2:build212-hudson-5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.5.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.jackson:jackson-core-asl:1.5.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:selenium-client-factory:2.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.saucelabs.selenium:selenium-client-factory:2.6" level="project" />
   </component>
 </module>
 
