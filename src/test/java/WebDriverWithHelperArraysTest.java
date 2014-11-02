@@ -156,8 +156,8 @@ public class WebDriverWithHelperArraysTest implements SauceOnDemandSessionIdProv
                 String browserVer = String.format("%-19s", browserVersion).replaceAll(" ", ".");
                 System.out.println("@Test validateTitle() testing browser/version: " + browserName + browserVer + "platform: " + platform);
 
-                webDriver.get("http://www.amazon.com/");
-                assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
+                webDriver.get("https://saucelabs.com/test/guinea-pig");
+                assertEquals("I am a page title - Sauce Labs", webDriver.getTitle());
 
             } catch (Exception e) {
                 System.err.println("Caught Exception in @Test validateTitle() testing browser/browser version: " + browser + " " + browserVersion + "   platform: " + platform + e.getMessage());
