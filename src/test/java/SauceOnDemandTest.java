@@ -50,8 +50,8 @@ public class SauceOnDemandTest implements SauceOnDemandSessionIdProvider {
             capabilities.setCapability("version", version);
         }
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "XP"));
-        capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox");
-        capabilities.setCapability("idle-timeout", 90);
+        capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "firefox"));
+        capabilities.setCapability("idle-timeout", "90");
         String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
         String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
         this.webDriver = new RemoteWebDriver(
