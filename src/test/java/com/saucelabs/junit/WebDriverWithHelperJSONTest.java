@@ -107,7 +107,7 @@ public class WebDriverWithHelperJSONTest implements SauceOnDemandSessionIdProvid
     @Parameters
     public static Collection<Object[]> data() {
 
-        String json = System.getenv("SAUCE_ONDEMAND_BROWSERS");
+        String json = System.getenv("bamboo_SAUCE_ONDEMAND_BROWSERS");
         List<Object[]> browsers = new ArrayList<Object[]>();
         JSONArray browserArray = null;
         try {
