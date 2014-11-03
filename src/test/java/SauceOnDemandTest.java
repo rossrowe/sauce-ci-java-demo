@@ -62,8 +62,8 @@ public class SauceOnDemandTest implements SauceOnDemandSessionIdProvider {
 
     @Test
     public void validateTitle() throws Exception {
-        webDriver.get("http://www.amazon.com/");
-        assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", webDriver.getTitle());
+        webDriver.get("https://saucelabs.com/test/guinea-pig");
+        assertEquals("I am a page title - Sauce Labs", webDriver.getTitle());
     }
 
     @After
