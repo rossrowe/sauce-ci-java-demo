@@ -1,7 +1,8 @@
 import com.saucelabs.selenium.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.Test;           
+import org.junit.Ignore;
 import org.openqa.selenium.WebDriver;
 
 import static org.junit.Assert.assertEquals;
