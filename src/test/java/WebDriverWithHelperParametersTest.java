@@ -131,7 +131,6 @@ public class WebDriverWithHelperParametersTest implements SauceOnDemandSessionId
      * @throws Exception thrown if an error occurs constructing the WebDriver
      */
     @Test
-    @Ignore
     public void validateTitle() throws Exception {
 
         capabilities = new DesiredCapabilities(browser, browserVersion, setPlatformCapabilities(platform));

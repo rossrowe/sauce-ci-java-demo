@@ -33,7 +33,8 @@ public class SeleniumClientFactoryOnDemandTest {
     /**
      *
      */
-    @Test
+    @Test    
+    @Ignore
     public void fullRun() throws Exception {
         webDriver.get("https://saucelabs.com/test/guinea-pig");
         assertEquals("I am a page title - Sauce Labs", webDriver.getTitle());
