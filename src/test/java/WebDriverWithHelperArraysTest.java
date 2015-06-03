@@ -145,6 +145,7 @@ public class WebDriverWithHelperArraysTest implements SauceOnDemandSessionIdProv
     }
 
     @Test
+    @Ignore
     public void validateTitle() throws Exception {
         if (!done) {
             try {
